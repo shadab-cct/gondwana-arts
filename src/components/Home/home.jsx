@@ -10,7 +10,7 @@ import BlogContent from '../BlogContent/BlogSection'
 import Footer from '../Footer/Footer'
 import Trending from '../Trending/Trending'
 
-const Home = () => {
+const home = () => {
   return (
     <div>
         <Navbar />
@@ -25,4 +25,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default home
