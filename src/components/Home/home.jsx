@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar/navbar'
-import Hero from '../Hero/hero'
+import Hero from '../Hero/Hero'
 import Category from '../Category/Category'
 import CategorySection from '../CategorySection/CategorySection'
 import Products from '../Products/Products'
