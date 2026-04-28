@@ -13,8 +13,7 @@ import Pic10 from '../../assets/pic10.webp'
 import Pic11 from '../../assets/pic11.webp'
 import Pic12 from '../../assets/pic12.webp'
 
-const products = [
-  {
+const products = [{
     title: "Village Life Art",
     artist: "By Local Artist",
     size: "20 x 20",
@@ -97,28 +96,30 @@ const products = [
     size: "18 x 18",
     price: "₹2600",
     image: Pic12,
-  },
-];
+  },];
+
 const Trending = () => {
   return (
-    <div className="bg-[radial-gradient(#00000010_1px,transparent_1px)] [background-size:20px_20px] py-16 px-6">
-      
+    <div className="bg-[radial-gradient(#00000010_1px,transparent_1px)] [background-size:20px_20px] py-12 px-4 md:px-10 lg:px-20">
+
       {/* Heading */}
-      <div className="text-center mb-12 flex items-center ml-150 mr-150">
-        <div className="flex-grow border-t-4 border-single border-black"></div>
+      <div className="flex items-center justify-center gap-10 mb-10">
+        <div className="w-10 sm:w-20 md:w-32 border-t-4 border-black"></div>
 
-  {/* Text */}
-  <div className="flex-row">
-    <h2 className=' text-[24px] font-bold text-[#242424] pl-8 pr-8'>Trending Products</h2>
-    <p className=' text-[16px] font-semibold text-[#242424]'>Top views in this week</p>
-  </div>
+        <div className="text-center">
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#242424]">
+            Trending Products
+          </h2>
+          <p className="text-xs md:text-sm lg:text-base font-semibold text-[#242424]">
+            Top views in this week
+          </p>
+        </div>
 
-  {/* Right Line */}
-  <div className="flex-grow border-t-4 border-single border-black"></div>
+        <div className="w-10 sm:w-20 md:w-32 border-t-4 border-black"></div>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:px-40">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
         
         {products.map((item, index) => (
           <div
@@ -126,46 +127,46 @@ const Trending = () => {
             className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
           >
             {/* Image */}
-            <div className="relative overflow-hidden ">
+            <div className="relative overflow-hidden">
               <img
                 src={item.image}
                 alt="art"
-                className="w-full h-64 object-cover group-hover:scale-105 transition duration-300"
+                className="w-full h-48 sm:h-56 md:h-60 object-cover group-hover:scale-105 transition duration-300"
               />
 
               {/* Badge */}
-              <span className="absolute top-3 left-3 bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full">
+              <span className="absolute top-3 left-3 bg-orange-100 text-orange-600 text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full">
                 🔥 Top Viewed
               </span>
 
               {/* Wishlist */}
-              <button className="absolute top-3 right-3 bg-white p-2 rounded-full shadow hover:bg-gray-100">
-                <Heart size={16} />
+              <button className="absolute top-3 right-3 bg-white p-1.5 sm:p-2 rounded-full shadow hover:bg-gray-100">
+                <Heart size={14} className="sm:w-4 sm:h-4" />
               </button>
             </div>
 
             {/* Content */}
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-1">
+            <div className="p-3 sm:p-4">
+              <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-1">
                 {item.title}
               </h3>
 
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-500 text-xs sm:text-sm">
                 {item.artist}
               </p>
 
-              <p className="text-gray-400 text-xs mt-1">
+              <p className="text-gray-400 text-[10px] sm:text-xs mt-1">
                 Size: {item.size}
               </p>
 
               {/* Price + Cart */}
-              <div className="flex items-center justify-between mt-4">
-                <span className="font-semibold text-orange-600 text-lg">
+              <div className="flex items-center justify-between mt-3 sm:mt-4">
+                <span className="font-semibold text-orange-600 text-sm sm:text-base md:text-lg">
                   {item.price}
                 </span>
 
-                <button className="bg-[#084b0c] text-white p-2 rounded-full hover:bg-green-600 transition">
-                  <ShoppingCart size={16} />
+                <button className="bg-[#084b0c] text-white p-1.5 sm:p-2 rounded-full hover:bg-green-600 transition">
+                  <ShoppingCart size={14} className="sm:w-4 sm:h-4" />
                 </button>
               </div>
             </div>
