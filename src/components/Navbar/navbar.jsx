@@ -4,7 +4,7 @@ import { FaPhone } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import Flagicon from "../../assets/flagicon.png";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo.png"
 import Search from "../../assets/search.png";
 import User from "../../assets/user.png"
 import Cart from "../../assets/cart.png"
